@@ -1,6 +1,7 @@
 <script>
 	import Header from '$lib/Header/index.svelte';
-	import '../app.css';
+	import '../global.scss';
+
 </script>
 
 <Header />
@@ -42,4 +43,5 @@
 			padding: 40px 0;
 		}
 	}
+
 </style>

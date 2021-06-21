@@ -1,6 +1,7 @@
 <script>
 	import { page } from '$app/stores';
 	import logo from './svelte-logo.svg';
+
 </script>
 
 <header>
@@ -19,6 +20,7 @@
 			<li class:active={$page.path === '/about'}><a sveltekit:prefetch href="/about">About</a></li>
 			<li class:active={$page.path === '/todos'}><a sveltekit:prefetch href="/todos">Todos</a></li>
 		</ul>
+
 		<svg viewBox="0 0 2 3" aria-hidden="true">
 			<path d="M0,0 L0,3 C0.5,3 0.5,3 1,2 L2,0 Z" />
 		</svg>
@@ -117,4 +119,5 @@
 	a:hover {
 		color: var(--accent-color);
 	}
+
 </style>

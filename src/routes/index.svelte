@@ -1,9 +1,15 @@
 <script context="module">
 	export const prerender = true;
+
 </script>
 
 <script>
 	import Counter from '$lib/Counter/index.svelte';
+	import { gsap } from 'gsap';
+	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+	import { DrawSVGPlugin } from 'gsap/dist/DrawSVGPlugin';
+	gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin);
+
 </script>
 
 <svelte:head>
@@ -56,4 +62,5 @@
 		top: 0;
 		display: block;
 	}
+
 </style>

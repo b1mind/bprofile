@@ -1,5 +1,17 @@
 import cookie from 'cookie';
 import { v4 as uuid } from '@lukeed/uuid';
+import {
+	handleIncomingRedirect,
+	login,
+	fetch,
+	getDefaultSession
+} from '@inrupt/solid-client-authn-browser';
+
+export function getSession(reqest) {
+	return {
+		user: {}
+	};
+}
 
 export const handle = async ({ request, resolve }) => {
 	const cookies = cookie.parse(request.headers.cookie || '');
@@ -14,7 +26,7 @@ export const handle = async ({ request, resolve }) => {
 
 	if (!cookies.userid) {
 		// if this is the first time the user has visited this app,
-		// set a cookie so that we recognise them when they return
+		// set a cookie so that we recognize them when they return
 		response.headers['set-cookie'] = `userid=${request.locals.userid}; Path=/; HttpOnly`;
 	}
 
