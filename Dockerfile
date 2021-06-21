@@ -5,7 +5,7 @@ FROM node:14.16.1
 ENV NODE_ENV development
 
 # Change our current working directory
-WORKDIR /usr/src/b
+WORKDIR ${srv-captain--b}
 
 # Copy over `package.json` and lock files to optimize the build process
 COPY ["package.json", "./"]
