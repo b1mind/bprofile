@@ -8,10 +8,10 @@ ENV NODE_ENV development
 WORKDIR /usr/src/app
 
 # Copy over `package.json` and lock files to optimize the build process
-COPY ["package.json", "pnpm-lock.yaml*", "./"]
+COPY ["package.json", "./"]
 
 # Install Node modules
-RUN pnpm
+RUN npm i
 
 # Copy over rest of the project files
 COPY . .
@@ -21,4 +21,4 @@ EXPOSE 3000
 EXPOSE 24678
 
 # Run `yarn dev` and set the host to 0.0.0.0 so we can access the web app from outside
-CMD ["pnpm", "dev", "--host", "0.0.0.0"]
+CMD ["npm", "dev", "--host", "0.0.0.0"]
