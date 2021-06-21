@@ -15,10 +15,7 @@ RUN npm i
 # Copy over rest of the project files
 COPY . .
 
-# Expose port 3000 for the SvelteKit app and 24678 for Vite's HMR
-EXPOSE 3000
-EXPOSE 24678
-
 # Run `yarn dev` and set the host to 0.0.0.0 so we can access the web app from outside
-RUN npm run build && node build
-# CMD ["node", "build"]
+RUN npm run build 
+
+CMD ["node", "build"]
