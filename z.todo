@@ -1,0 +1,5 @@
+Todo:
+  ☐ test postcss plugins to make sure they work @critical 
+  ☐ import gsap back into project @high 
+  ☐ attempt to get Solid Auth working (don't spend all year on it) @30m
+  ☐ clone to template after global and happy with default layout
