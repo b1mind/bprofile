@@ -1,7 +1,8 @@
 <script>
 	import Header from '$lib/Header/index.svelte';
-	import '../global.scss';
 
+	// changed up to scss still need to check global for components
+	import '../global.scss';
 </script>
 
 <Header />
@@ -43,5 +44,4 @@
 			padding: 40px 0;
 		}
 	}
-
 </style>
