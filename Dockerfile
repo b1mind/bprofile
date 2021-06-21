@@ -20,4 +20,4 @@ EXPOSE 3000
 EXPOSE 24678
 
 # Run `yarn dev` and set the host to 0.0.0.0 so we can access the web app from outside
-CMD ["node", "build"]
+CMD ["npm", "run", "build", "node", "build"]
