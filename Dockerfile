@@ -1,24 +1,11 @@
-# Our Node base image
+# build environment
 FROM node:14.16.1 as builder
-
-# Set the Node environment to development to ensure all packages are installed
-ENV NODE_ENV development
-
-# Change our current working directory
-WORKDIR /user/src/app
-
-# Copy over `package.json` and lock files to optimize the build process
-COPY ["package.json", "./"]
-
-# Install Node modules
-RUN npm i
-
-# Copy over rest of the project files
-COPY . .
-
-# Run `yarn dev` and set the host to 0.0.0.0 so we can access the web app from outside
-RUN npm run build 
-
+RUN mkdir /usr/src/app
+WORKDIR /usr/src/app
+ENV PATH /usr/src/app/node_modules/.bin:$PATH
+COPY . /usr/src/app
+RUN npm install
+RUN npm run build
 # production environment
 FROM nginx:1.13.9-alpine
 RUN rm -rf /etc/nginx/conf.d
