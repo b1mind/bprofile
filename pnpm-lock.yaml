@@ -7,6 +7,7 @@ specifiers:
   '@inrupt/vocab-common-rdf': ^0.7.4
   '@lukeed/uuid': ^2.0.0
   '@sveltejs/adapter-node': ^1.0.0-next.26
+  '@sveltejs/adapter-static': ^1.0.0-next.13
   '@sveltejs/kit': next
   cookie: ^0.4.1
   eslint: ^7.22.0
@@ -27,6 +28,7 @@ dependencies:
 
 devDependencies:
   '@sveltejs/adapter-node': 1.0.0-next.26
+  '@sveltejs/adapter-static': 1.0.0-next.13
   '@sveltejs/kit': 1.0.0-next.115_svelte@3.38.2
   eslint: 7.29.0
   eslint-config-prettier: 8.3.0_eslint@7.29.0
@@ -195,6 +197,10 @@ packages:
     resolution: {integrity: sha512-jhlCBJH/Gyge0u5sx67UgEEHzoBk69Z9pXXtvERXrDyfmbao5v55zEaroPucc089CHKQvLRQJ3mGU81QZmk31Q==}
     dependencies:
       esbuild: 0.12.9
+    dev: true
+
+  /@sveltejs/adapter-static/1.0.0-next.13:
+    resolution: {integrity: sha512-zaXJlWK9JfrjrE6nG5etB8kf4DSkbE3H8Ql6gmCk3WjdvpY85a60TMYBU9OK2iunkqpHnPYiMUGEnOGYmWlLYA==}
     dev: true
 
   /@sveltejs/kit/1.0.0-next.115_svelte@3.38.2:

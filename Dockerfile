@@ -6,6 +6,7 @@ ENV PATH /usr/src/app/node_modules/.bin:$PATH
 COPY . /usr/src/app
 RUN npm install
 RUN npm run build
+
 # production environment
 FROM nginx:1.13.9-alpine
 RUN rm -rf /etc/nginx/conf.d
