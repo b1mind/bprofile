@@ -33,6 +33,7 @@
     justify-content: center;
     align-items: center;
     padding: 40px;
+
     @media (min-width: 480px) {
       padding: 40px 0;
     }
@@ -40,6 +41,7 @@
 
   footer a {
     font-weight: bold;
+
     @media (min-width: 480px) {
       font-weight: 400;
     }
