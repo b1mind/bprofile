@@ -5,10 +5,6 @@
 
 <script>
 	import Counter from '$lib/Counter/index.svelte';
-	import { gsap } from 'gsap';
-	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-	import { DrawSVGPlugin } from 'gsap/dist/DrawSVGPlugin';
-	gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin);
 
 </script>
 
