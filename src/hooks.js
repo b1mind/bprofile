@@ -1,17 +1,17 @@
 import cookie from 'cookie';
 import { v4 as uuid } from '@lukeed/uuid';
-import {
-	handleIncomingRedirect,
-	login,
-	fetch,
-	getDefaultSession
-} from '@inrupt/solid-client-authn-browser';
+// import {
+// 	handleIncomingRedirect,
+// 	login,
+// 	fetch,
+// 	getDefaultSession
+// } from '@inrupt/solid-client-authn-browser';
 
-export function getSession(reqest) {
-	return {
-		user: {}
-	};
-}
+// export function getSession(reqest) {
+// 	return {
+// 		user: {}
+// 	};
+// }
 
 export const handle = async ({ request, resolve }) => {
 	const cookies = cookie.parse(request.headers.cookie || '');
