@@ -6,12 +6,12 @@ specifiers:
   '@inrupt/solid-client-authn-browser': ^1.9.0
   '@inrupt/vocab-common-rdf': ^0.7.4
   '@lukeed/uuid': ^2.0.0
+  '@sveltejs/adapter-node': ^1.0.0-next.26
   '@sveltejs/kit': next
   cookie: ^0.4.1
   eslint: ^7.22.0
   eslint-config-prettier: ^8.1.0
   eslint-plugin-svelte3: ^3.2.0
-  gsap: file:scripts/gsap-bonus.tgz
   prettier: ~2.2.1
   prettier-plugin-svelte: ^2.2.0
   sass: ^1.35.1
@@ -26,11 +26,11 @@ dependencies:
   cookie: 0.4.1
 
 devDependencies:
+  '@sveltejs/adapter-node': 1.0.0-next.26
   '@sveltejs/kit': 1.0.0-next.115_svelte@3.38.2
   eslint: 7.29.0
   eslint-config-prettier: 8.3.0_eslint@7.29.0
   eslint-plugin-svelte3: 3.2.0_eslint@7.29.0+svelte@3.38.2
-  gsap: file:scripts/gsap-bonus.tgz
   prettier: 2.2.1
   prettier-plugin-svelte: 2.3.1_prettier@2.2.1+svelte@3.38.2
   sass: 1.35.1
@@ -189,6 +189,12 @@ packages:
     dependencies:
       estree-walker: 2.0.2
       picomatch: 2.3.0
+    dev: true
+
+  /@sveltejs/adapter-node/1.0.0-next.26:
+    resolution: {integrity: sha512-jhlCBJH/Gyge0u5sx67UgEEHzoBk69Z9pXXtvERXrDyfmbao5v55zEaroPucc089CHKQvLRQJ3mGU81QZmk31Q==}
+    dependencies:
+      esbuild: 0.12.9
     dev: true
 
   /@sveltejs/kit/1.0.0-next.115_svelte@3.38.2:
@@ -1338,10 +1344,4 @@ packages:
 
   /yallist/4.0.0:
     resolution: {integrity: sha512-3wdGidZyq5PB084XLES5TpOSRA3wjXAlIWMhum2kRcv/41Sn2emQ0dycQW4uZXLejwKvg6EsvbdlVL+FYEct7A==}
-    dev: true
-
-  file:scripts/gsap-bonus.tgz:
-    resolution: {integrity: sha512-8i8DqSCu57q0wj5JYDyAlwd2Nl+WS4oAPYGsBJLqRVcDcsr4biwzqKeeSvS78+wyff2cIWNHeOr1oAyVA9xGqw==, tarball: file:scripts/gsap-bonus.tgz}
-    name: gsap
-    version: 3.7.0
     dev: true
