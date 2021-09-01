@@ -1,4 +1,5 @@
 <script context="module">
+  export const prerender = true
   import { enhance } from '$lib/form'
 
   // see https://kit.svelte.dev/docs#loading
