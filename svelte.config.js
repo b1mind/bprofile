@@ -9,7 +9,7 @@ const config = {
     // hydrate the <div id="svelte"> element in src/app.html
     target: '#svelte',
     //defaults for adapter just so I learn them
-    adapter: adapter({}),
+    adapter: adapter(),
   },
   preprocess: [
     preprocess({
