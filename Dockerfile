@@ -2,7 +2,7 @@
 FROM node:16.2 as builder
 WORKDIR /user/src/app
 COPY package*.json ./
-RUN npm ci
+RUN npm i
 RUN npm run build
 
 # production environment
