@@ -1,8 +1,8 @@
 # Buld Step
-FROM node:alpine as builder
-WORKDIR /user/src/app
+FROM node:10-alpine as builder
 COPY package*.json ./
 RUN npm i
+WORKDIR /user/src/app
 COPY . .
 RUN npm run build
 
