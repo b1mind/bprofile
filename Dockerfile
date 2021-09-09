@@ -1,9 +1,9 @@
 FROM node:10-alpine
 RUN mkdir -p /user/src/app
 WORKDIR /usr/src/app
+ENV PATH /usr/src/app/node_modules/.bin:$PATH
 COPY . /usr/src/app
 RUN npm install
-ENV PATH /usr/src/app/node_modules/.bin:$PATH
 RUN npm run build
 ENV NODE_ENV production
 ENV PORT 80
