@@ -1,23 +1,12 @@
-FROM node:10-alpine
-RUN mkdir -p /user/src/app
+# build environment
+FROM node:14.16.1
+RUN mkdir /usr/src/app
 WORKDIR /usr/src/app
 ENV PATH /usr/src/app/node_modules/.bin:$PATH
 COPY . /usr/src/app
 RUN npm install
 RUN npm run build
-ENV NODE_ENV production
-ENV PORT 80
-EXPOSE 3000
-CMD ["npm", "run", "preview"]
-
-# # build environment
-# FROM node:14.16.1 as builder
-# RUN mkdir /usr/src/app
-# WORKDIR /usr/src/app
-# ENV PATH /usr/src/app/node_modules/.bin:$PATH
-# COPY . /usr/src/app
-# RUN npm install
-# RUN npm run build
+CMD ["node", "index.js"]
 
 # # production environment
 # FROM nginx:1.13.9-alpine
