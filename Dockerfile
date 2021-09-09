@@ -1,12 +1,12 @@
 # build environment
-FROM node:14.16.1
+FROM node:14.16.1-alpine
 WORKDIR /usr/src/app/
 COPY *.json /usr/src/app/
 RUN npm install
 RUN npm build
 COPY . /usr/src/app/
 EXPOSE 3000
-CMD ["node", "index.js"]
+CMD ["node", "./build/index.js"]
 
 # # production environment
 # FROM nginx:1.13.9-alpine
