@@ -1,10 +1,11 @@
 # build environment
-FROM node:14.16.1-alpine
-WORKDIR /usr/src/app/
-COPY *.json /usr/src/app/
+FROM node:14.16.1 as builder
+RUN mkdir /usr/src/app
+WORKDIR /usr/src/app
+ENV PATH /usr/src/app/node_modules/.bin:$PATH
+COPY . /usr/src/app
 RUN npm install
-RUN npm build
-COPY . /usr/src/app/
+RUN npm run build
 EXPOSE 3000
 CMD ["node", "./build/index.js"]
 
