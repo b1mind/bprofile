@@ -7,7 +7,7 @@ ENV PATH /usr/src/app/node_modules/.bin:$PATH
 RUN npm build
 COPY . /usr/src/app/
 EXPOSE 3000
-CMD ["node", "build/index.js"]
+CMD ["node", "index.js"]
 
 # # production environment
 # FROM nginx:1.13.9-alpine
