@@ -4,7 +4,7 @@ WORKDIR /usr/src/app/
 COPY *.json /usr/src/app/
 RUN npm install
 ENV PATH /usr/src/app/node_modules/.bin:$PATH
-RUN npm run build
+RUN npm build
 COPY . /usr/src/app/
 EXPOSE 3000
 CMD ["node", "build/index.js"]
