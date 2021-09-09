@@ -3,9 +3,8 @@ FROM node:14.16.1
 WORKDIR /usr/src/app/
 COPY *.json /usr/src/app/
 RUN npm install
-ENV PATH /usr/src/app/node_modules/.bin:$PATH
 RUN npm build
-COPY ./build/ /usr/src/app/
+COPY . /usr/src/app/
 EXPOSE 3000
 CMD ["node", "index.js"]
 
