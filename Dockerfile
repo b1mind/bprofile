@@ -7,7 +7,7 @@ RUN npm install
 CMD [ "npm", "run", "build" ]
 COPY . /usr/src/app/
 EXPOSE 3000
-CMD ["node", "index.js"]
+CMD ["node", "build/index.js"]
 
 # # production environment
 # FROM nginx:1.13.9-alpine
