@@ -5,7 +5,7 @@ COPY *.json /usr/src/app/
 RUN npm install
 ENV PATH /usr/src/app/node_modules/.bin:$PATH
 RUN npm build
-COPY . /usr/src/app/
+COPY ./build/ /usr/src/app/
 EXPOSE 3000
 CMD ["node", "index.js"]
 
