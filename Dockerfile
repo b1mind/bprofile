@@ -1,11 +1,11 @@
 # build environment
 FROM node:14.16.1
-RUN mkdir /usr/src/app
-WORKDIR /usr/src/app
-COPY *.json ./
+WORKDIR /app
+COPY *.json /app/
 RUN npm install
-CMD [ "npm", "run", "build" ]
-COPY . /usr/src/app/
+ENV PATH /app/node_modules/.bin:$PATH
+RUN npm run build
+COPY . /app/
 EXPOSE 3000
 CMD ["node", "build/index.js"]
 
