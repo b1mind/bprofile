@@ -3,6 +3,7 @@ RUN mkdir -p /user/src/app
 WORKDIR /usr/src/app
 COPY . /usr/src/app
 RUN npm install
+ENV PATH /usr/src/app/node_modules/.bin:$PATH
 RUN npm run build
 ENV NODE_ENV production
 ENV PORT 80
