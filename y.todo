@@ -1,0 +1,28 @@
+
+TODO: 
+  ✔ configured mic/aux filters for noise suppression without Krisp. @done(22-02-01 19:14)
+  ✔ one last round of sound checks (Krisp) @done(22-02-01 18:50)
+  ✔ blur screen scene or overlay to block sensitive data. @done(22-02-01 19:02)
+  ✔ add keybinding for scene switching @done(22-02-01 22:17)
+  ☐ learn how to overlay with SVG/CSS/GSAP
+  ☐ comicate with vsCode via chat commands (call commands!)
+
+Cam/Overlay Ideas:
+  ☐ AFK scene ... Night Mind animation with info about stream
+  ☐ Try gsap or use CSS for custom alerts (around keeb cam)
+  ☐ Blur scene animates a cover or something for keeb cam
+
+Chat commands:
+  ☐ !extensions - !todo  
+  ☐ !focus(tell people I am in focus mode doing x)
+  ☐ !figs - !pc - !tools 
+  ☐ !fontUp - vsc cycle.FontToggle
+
+wishlist:
+  ☐ think about redemtions and what to do
+  ☐ think about what to do for redemtion points
+  ☐ make layer for "streamdeck" in QMK
+  ☐ look into DIY streamdecks (yt history has good ones?)
+  ☐ decide to add chat overlay (https://streamparrot.com/ or https://showmy.chat/)
+  ☐ look into snapchat filters (https://snapcamera.snapchat.com)
+  ☐ powertoys window docking
